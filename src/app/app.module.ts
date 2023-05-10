@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import { FormationSessionMaiComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    FormationSessionMaiComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [FormationSessionMaiComponent]
 })
-export class AppModule { }
+export class FormationManagerModule { }

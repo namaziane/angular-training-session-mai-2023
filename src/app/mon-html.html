@@ -1,0 +1,32 @@
+<h1 style="background-color:green">{{title + 'URGENTE'| uppercase}}</h1>
+
+<div *ngFor="let item of maListe" >
+    <span [ngClass]="{'mon_css1': item.id>2,'mon_css2': item.id<=2}">{{item.name}}</span>
+</div>
+
+<div>
+              <div *ngIf="fct()==3">
+              Tests : {{fct() +5 }}
+              </div>
+              <div *ngIf="fct()==2">
+              Tests : {{fct() +5 }}
+              </div>
+              <div>
+              Name : {{maVariable.name}}
+              </div>
+              <div>
+              Start Date: {{maVariable.startDate}}
+              </div>
+              <div>
+              End Date:{{maVariable.endDate}}
+              </div>
+              <div>
+              Time: {{maVariable.time}}
+              </div>
+              <div>
+                Address:
+                <p>{{maVariable.location.address}}</p>
+                <p>{{maVariable.location.city}}</p>
+                <p>{{maVariable.location.country}}</p>
+              </div>
+              </div>
