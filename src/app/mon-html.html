@@ -1,7 +1,12 @@
 <h1 style="background-color:green">{{title + 'URGENTE'| uppercase}}</h1>
-
+<h2>NGCLASS</h2>
 <div *ngFor="let item of maListe" >
     <span [ngClass]="{'mon_css1': item.id>2,'mon_css2': item.id<=2}">{{item.name}}</span>
+</div>
+
+<h2>NGSTYLE</h2>
+<div *ngFor="let item of maListe" >
+    <span [ngStyle]="{'color': item.id>2 ? 'red': 'blue'}">{{item.name}}</span>
 </div>
 
 <div>
