@@ -1,37 +1,37 @@
 <h1 style="background-color:green">{{title + 'URGENTE'| uppercase}}</h1>
 <h2>NGCLASS</h2>
 <div *ngFor="let item of maListe" >
-    <span [ngClass]="{'mon_css1': item.id>2,'mon_css2': item.id<=2}">{{item.name}}</span>
+<span [ngClass]="{'mon_css1': item.id>2,'mon_css2': item.id<=2}">{{item.name}}</span>
 </div>
 
 <h2>NGSTYLE</h2>
 <div *ngFor="let item of maListe" >
-    <span [ngStyle]="{'color': item.id>2 ? 'red': 'blue'}">{{item.name}}</span>
+<span [ngStyle]="{'color': item.id>2 ? 'red': 'blue'}">{{item.name}}</span>
 </div>
 
 <div>
-              <div *ngIf="fct()==3">
-              Tests : {{fct() +5 }}
-              </div>
-              <div *ngIf="fct()==2">
-              Tests : {{fct() +5 }}
-              </div>
-              <div>
-              Name : {{maVariable.name}}
-              </div>
-              <div>
-              Start Date: {{maVariable.startDate}}
-              </div>
-              <div>
-              End Date:{{maVariable.endDate}}
-              </div>
-              <div>
-              Time: {{maVariable.time}}
-              </div>
-              <div>
-                Address:
-                <p>{{maVariable.location.address}}</p>
-                <p>{{maVariable.location.city}}</p>
-                <p>{{maVariable.location.country}}</p>
-              </div>
-              </div>
+  <div *ngIf="fct()==3">
+    Tests : {{fct() +5 }}
+  </div>
+  <div *ngIf="fct()==2">
+    Tests : {{fct() +5 }}
+  </div>
+  <div>
+    Name : {{maVariable.name}}
+  </div>
+  <div>
+    Start Date: {{maVariable.startDate}}
+  </div>
+  <div>
+    End Date:{{maVariable.endDate}}
+  </div>
+  <div>
+    Time: {{maVariable.time}}
+  </div>
+  <div>
+  Address:
+  <span>{{maVariable.location.address}}</span>
+  <span>{{maVariable.location.city}}</span>
+  <span>{{maVariable.location.country}}</span>
+  </div>
+</div>
