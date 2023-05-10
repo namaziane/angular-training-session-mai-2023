@@ -1,0 +1,14 @@
+git checkout -b malek
+git checkout -b xiaolu
+git checkout -b omar
+git checkout -b saade
+git checkout -b steve
+git checkout -b armel
+
+git push --set-upstream origin steve
+git push --set-upstream origin armel
+git push --set-upstream origin saade
+git push --set-upstream origin omar
+git push --set-upstream origin xiaolu
+git push --set-upstream origin malek
+
