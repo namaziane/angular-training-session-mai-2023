@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { FormationSessionMaiComponent } from './app.component';
+import { FormationSessionMaiComponent } from './app-formation-session-mai.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
