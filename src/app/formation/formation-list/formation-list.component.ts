@@ -5,8 +5,11 @@ import { Component } from "@angular/core";
   templateUrl:'formation-list.component.html'
 })
 export class FormationsList {
+  data = 'Créer un pipe qui prend une chaîne entrée et transforme en majuscule le premier caractere de chacune de ses mots.';
+  
   title = 'liste Formation';
-  trainings = [
+  currentDate = new Date();
+ trainings = [
     {
       nom: 'Formation Angular Débutant', date: '15/02/2023', heure: '18h', url:
         "https:team.com", format: "enligne", hidden: false
