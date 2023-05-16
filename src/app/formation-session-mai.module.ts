@@ -8,6 +8,8 @@ import { HightlightDirective } from './shared/directives/highligh/highligh.direc
 import { ConfirmDirective } from './shared/directives/confirm.directive';
 import { MMonUpperCase } from './shared/pipes/uppercase.pipe';
 import { UppercaseFirstCaracter } from './shared/pipes/uppercase-first-caracter.pipe';
+import { FormsModule } from '@angular/forms';
+import { FormFilter } from './shared/pipes/formFilter';
 
 @NgModule({
   declarations: [
@@ -16,10 +18,10 @@ import { UppercaseFirstCaracter } from './shared/pipes/uppercase-first-caracter.
     //directives
     HightlightDirective, ConfirmDirective,
     //pipes
-    MMonUpperCase, UppercaseFirstCaracter
+    MMonUpperCase, UppercaseFirstCaracter, FormFilter
   ],
   imports: [
-    BrowserModule
+    BrowserModule,FormsModule
   ],
   providers: [],
   bootstrap: [FormationSessionMaiComponent]

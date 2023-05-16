@@ -1,19 +1,12 @@
-<p>{{ data | uppercaseFirstCaracter}}</p>
 <div class='container'>
-  <p>{{ currentDate | date:'short' }}</p>
-  <button class="btn" (click)="toggleAll()">Afficher Tout/ Cacher Tout</button>
+  <button class="btn">Afficher Tout/ Cacher Tout</button>
+  <input type="text" [(ngModel)]="champFilter" (click)="fct()"/>
+  <p>{{champFilter}}</p>
 </div>
-<div class='container' *ngFor="let unElement of trainings" >
-  <div>
-      <h2>{{unElement.nom | monUpperCase:'F':'FFFFF'| monUpperCase:'A':'AAAA' }}</h2>
-      <button (click)="toggle(unElement.nom)" class="btn">Afficher/Cacher </button>
-  </div>
-  <div [hidden]="unElement.hidden">
-    <span *ngIf="unElement.url">(en ligne)</span>
-    <span *ngIf="unElement.lieu">(sur site)</span>
-    <mon-premier-component></mon-premier-component>
+<div class='container'>
+  <div *ngFor="let unElement of filtredTraining | formFilter" >
+    <formation-view [formation]="unElement" [nom]="unElement.name"></formation-view>
   </div>
 </div>
-
 
  

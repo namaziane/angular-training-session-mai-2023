@@ -2,7 +2,8 @@ export interface ITraining {
   id: number;
   code: string;
   name: string;
-  startDate: string;
+  hidden: boolean;
+  startDate?: string;
   price?: number;
   description?: string;
   starRating?: number;
