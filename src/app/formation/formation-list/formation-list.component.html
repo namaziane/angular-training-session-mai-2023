@@ -1,3 +1,5 @@
+<button [disabled]="!activer" (click)="toggle()">Bouton désactivé</button>
+
 <div class='container' *ngFor="let unElement of trainings" >
   <p highlight inputColor="magenta">{{unElement.nom}}</p>
   <p appConfirm>{{unElement.nom}}</p>

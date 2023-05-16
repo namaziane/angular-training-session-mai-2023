@@ -5,6 +5,10 @@ import { Component } from "@angular/core";
   templateUrl:'formation-list.component.html'
 })
 export class FormationsList {
+  toggle() {
+    this.activer = !this.activer;
+  }
+  activer:boolean = true;
   title = 'liste Formation';
  trainings = [
     {nom:'Formation Angular Débutant', date: '15/02/2023', heure: '18h', url:"https:team.com"},
