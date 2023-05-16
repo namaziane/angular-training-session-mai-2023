@@ -1,5 +1,6 @@
 <div class='container' *ngFor="let unElement of trainings" >
   <p highlight inputColor="magenta">{{unElement.nom}}</p>
+  <p appConfirm>{{unElement.nom}}</p>
   <span *ngIf="unElement.url">(en ligne)</span>
   <span *ngIf="unElement.lieu">(sur site)</span>
   <mon-premier-component></mon-premier-component>
