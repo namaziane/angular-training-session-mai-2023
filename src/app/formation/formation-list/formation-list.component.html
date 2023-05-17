@@ -1,10 +1,10 @@
 <div class='container'>
   <button class="btn">Afficher Tout/ Cacher Tout</button>
-  <input type="text" [(ngModel)]="champFilter" (click)="fct()"/>
+  <input type="text" [(ngModel)]="champFilter"/>
   <p>{{champFilter}}</p>
 </div>
 <div class='container'>
-  <div *ngFor="let unElement of filtredTraining | formFilter" >
+  <div *ngFor="let unElement of filtredTraining | formFilter:champFilter:'time'" >
     <formation-view [formation]="unElement" [nom]="unElement.name"></formation-view>
   </div>
 </div>

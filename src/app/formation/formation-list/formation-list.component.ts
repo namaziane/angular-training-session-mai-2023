@@ -10,7 +10,7 @@ export class FormationsList implements OnInit {
     name: 'angular',
     startDate: '13/02/2023',
     endDate: '22/02/2023',
-    time: '6am',
+    time: '7am',
     location: {
       address: 'Rue de abdelkrim alkhatabi', city: 'la defense', country:
         'France'
@@ -24,25 +24,14 @@ export class FormationsList implements OnInit {
         'France'
       }
     }];
-  
+  //S O L I D --> SINGLE RESP PRINC
   filtredTraining : any = [];
-
-  fct() {
-    this.filtredTraining = this.trainings.filter(f => f.name == 'angular');
-  }
+ 
   ngOnInit(): void {
     this.filtredTraining = this.trainings;
   }
 
-  _champFilter = '';
+  champFilter = 'angular';
   
-  public set champFilter(v: string) {
-    this.filtredTraining = this.trainings.filter((f:any)=>f.name.startWith(v))
-    this._champFilter = v;
-  }
-  
-  public get champFilter() : string {
-      return this._champFilter
-  }
-  
+   
 }
